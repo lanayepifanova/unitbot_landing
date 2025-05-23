@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UnitBot - All-in-One Property Management Platform</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Favicon & Icons -->
+  <link rel="icon" href="/favicons/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon">
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicons/android-chrome-512x512.png">
+  
+  <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="/favicons/site.webmanifest">
+
+  <style>
+    :root {
+      --primary: #1a73e8;
+      --secondary: #e8f0fe;
+      --background: #ffffff;
+      --text: #202124;
+      --card: #f5f7fa;
+      --button-hover: #1669c1;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--background);
+      color: var(--text);
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1em 2em;
+      background-color: var(--background);
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    header img {
+      height: 40px;
+    }
+
+    nav a {
+      color: var(--primary);
+      margin-left: 1.5em;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 6em 2em;
+      background-color: var(--secondary);
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      color: var(--primary);
+      margin-bottom: 0.2em;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin: 0.5em 0;
+    }
+
+    .cta-button {
+      background: var(--primary);
+      border: none;
+      padding: 1em 2em;
+      font-size: 1em;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 8px;
+      margin-top: 1em;
+      transition: background 0.3s;
+    }
+
+    .cta-button:hover {
+      background: var(--button-hover);
+    }
+
+    .signup-form {
+      display: none;
+      max-width: 400px;
+      margin: 2em auto;
+      padding: 2em;
+      background-color: var(--card);
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .signup-form input {
+      width: 100%;
+      margin-bottom: 1em;
+      padding: 0.8em;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+
+    .signup-form button {
+      background: var(--primary);
+      border: none;
+      padding: 0.8em;
+      width: 100%;
+      border-radius: 6px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .features {
+      padding: 4em 2em;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2em;
+      background-color: var(--background);
+    }
+
+    .feature-card {
+      background-color: var(--card);
+      padding: 2em;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      transition: box-shadow 0.3s;
+    }
+
+    .feature-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .faq-section {
+      padding: 4em 2em;
+      background-color: var(--secondary);
+    }
+
+    .faq-section h2 {
+      text-align: center;
+      margin-bottom: 1.5em;
+    }
+
+    .faq-item {
+      max-width: 700px;
+      margin: 1em auto;
+    }
+
+    .faq-item h4 {
+      margin-bottom: 0.5em;
+      color: var(--primary);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2em;
+      background-color: var(--background);
+      color: #888;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="logo.png" alt="UnitBot Logo" />
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>UnitBot</h1>
+    <p>All-in-One Property Management Platform.</p>
+    <p>For Property Managers, CRE Teams, and Private Landlords.</p>
+    <button class="cta-button" onclick="document.getElementById('signup').style.display='block'">Request a Demo</button>
+  </section>
+
+  <div id="signup" class="signup-form">
+    <h3 style="text-align:center;">Sign Up for Early Access</h3>
+    <form method="POST" action="/signup">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="text" name="company" placeholder="Company Name" required />
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <section id="features" class="features">
+    <div class="feature-card">
+      <h3>Leasing Automation</h3>
+      <p>Generate, send, and manage digital lease agreements with integrated e-signatures.</p>
+      <p>Automated workflows for tenant onboarding, including ID verification and payment setup.</p>
+      <p>Secure document storage with compliance tracking tools.</p>
+    </div>
+    
+    <div class="feature-card">
+      <h3>Maintenance Management</h3>
+      <p>Simple ticket submission and tracking for tenants with chat, photos, and feedback.</p>
+      <p>Requests are automatically routed to vendors or in-house teams with SLA tracking.</p>
+      <p>Real-time updates and maintenance performance reporting.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Property Management Core</h3>
+      <p>Manage your entire portfolio: units, leases, tenants, and maintenance in one dashboard.</p>
+      <p>Automated rent collection, financial reporting, and renewal reminders.</p>
+      <p>Built-in communication portal for seamless messaging with tenants and vendors.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Analytics & Reporting</h3>
+      <p>Track lease performance and maintenance costs with dynamic dashboards.</p>
+      <p>Gain visibility into occupancy/vacancy trends and revenue forecasts.</p>
+      <p>Exportable profit and loss summaries for strategic decision-making.</p>
+    </div>
+  </section>
+
+  <section id="faq" class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h4>What is UnitBot?</h4>
+      <p>UnitBot is an all-in-one software platform for property managers, CRE teams, and landlords to manage leasing, maintenance, and portfolio operations efficiently.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Is this for residential or commercial?</h4>
+      <p>UnitBot is built for both commercial real estate teams and residential property managers.</p>
+    </div>
+    <div class="faq-item">
+      <h4>When is the product launching?</h4>
+      <p>We’re currently onboarding early access users — sign up today to be part of the pilot group!</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 UnitBot. All rights reserved.</p>
+  </footer>
+</body>
+</html>
